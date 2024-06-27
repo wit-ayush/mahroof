@@ -1,5 +1,5 @@
 // src/pages/ProductListing/Filter.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import './Filter.css';
 import { useData } from '../../contexts/DataProvider';
 
@@ -9,7 +9,7 @@ interface FilterProps {
 
 const Filter: React.FC<FilterProps> = ({ className }) => {
   const { dispatch, state } = useData();
-  const [isFilterMenuOn, setIsFilterMenuOn] = useState(false);
+  // const [isFilterMenuOn, setIsFilterMenuOn] = useState(false);
 
   const handleCategoryChange = (category: string) => {
     dispatch({
