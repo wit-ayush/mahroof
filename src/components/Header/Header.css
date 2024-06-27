@@ -11,7 +11,12 @@
 .Logo {
   max-width: 40px;
   margin: 7px;
-  filter: invert(1);
+  /* filter: invert(1); */
+}
+
+.LogoText {
+  max-width: 80px;
+  margin: 7px;
 }
 
 .BrandName {
