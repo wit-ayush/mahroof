@@ -1,19 +1,23 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import './LandingPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage: React.FC = () => {
+
+  var navigate = useNavigate();
+
   return (
     <div className="LandingPage">
       <div 
         style={{
           display:'flex',
-          backgroundColor:'red', 
           height:'100%', 
           width:'100%',
           justifyContent:'center',
           alignItems:'center'
         }}
+        onClick={()=> navigate("./products")}
       >
         <Tilt
           className="TiltCard"
@@ -23,20 +27,31 @@ const LandingPage: React.FC = () => {
           transitionSpeed={2000}
           scale={1.02}
         >
-          <div className="Card" style={{ backgroundColor: 'green' }}>
+          <div className="Card1" style={{ padding: 20 }}>
             <img
-              src="https://seeklogo.com/images/L/logo-com-hr-logo-5636A4D2D5-seeklogo.com.png"
-              alt="Logo 1"
-              className="Logo"
+              src={require('../../assests/click_logo_c.png')}
+              alt="Logo 2"
+              style={{
+                height: '80%',
+                width: '70%',
+                alignSelf:'center'
+              }}
             />
-            <h2 className="CardTitle">Card 1</h2>
+            <img
+              src={require('../../assests/click_logo_letters.png')}
+              alt="Logo 2"
+              style={{
+                height: '100%',
+                width: '100%',
+                margin: 7,
+              }}
+            />
           </div>
         </Tilt>
       </div>
       <div 
         style={{
           display:'flex',
-          backgroundColor:'green', 
           height:'100%', 
           width:'100%',
           justifyContent:'center',
@@ -51,13 +66,25 @@ const LandingPage: React.FC = () => {
           transitionSpeed={2000}
           scale={1.02}
         >
-          <div className="Card" style={{ backgroundColor: 'red' }}>
+          <div className="Card2" style={{padding: 20}}>
             <img
-              src="https://seeklogo.com/images/L/logo-com-hr-logo-5636A4D2D5-seeklogo.com.png"
+              src={require('../../assests/click_logo_c.png')}
               alt="Logo 2"
-              className="Logo"
+              style={{
+                height: '80%',
+                width: '70%',
+                alignSelf:'center'
+              }}
             />
-            <h2 className="CardTitle">Card 2</h2>
+            <img
+              src={require('../../assests/click_logo_letters.png')}
+              alt="Logo 2"
+              style={{
+                height: '100%',
+                width: '100%',
+                margin: 7,
+              }}
+            />
           </div>
         </Tilt>
       </div>
