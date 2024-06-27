@@ -57,6 +57,7 @@ const LandingPage: React.FC = () => {
           justifyContent:'center',
           alignItems:'center'
         }}
+        onClick={()=> navigate("./products")}
       >
         <Tilt
           className="TiltCard"
